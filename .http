@@ -1,0 +1,24 @@
+@url = http://localhost:4000
+
+POST {{url}}/auth/login
+Content-Type: application/json
+
+{
+    "name":"nizam",
+    "email":"nizam@gmail.com",
+    "password":"ddjjd"
+}
+###
+POST {{url}}/target/61065dc9b8bc187330b15e80
+Content-Type: application/json
+
+{
+   \
+    "targetName":"nizam",
+    "targetCrush":"rizly"
+}
+
+###
+
+GET {{url}}/user
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiI2MTA2NWRjOWI4YmMxODczMzBiMTVlODAiLCJpYXQiOjE2Mjc4MTI3MDUsImlzcyI6IkxvdmVCeXRlcyJ9.dgUQXM_U_T35mFdVh2baID9qAMeFe4ra94WK1jx1wHY
