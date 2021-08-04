@@ -5,20 +5,37 @@ Content-Type: application/json
 
 {
     "name":"nizam",
-    "email":"nizam@gmail.com",
-    "password":"ddjjd"
+    "email":"nizamniz1010@gmail.com",
+    "password":"123"
 }
 ###
-POST {{url}}/target/61065dc9b8bc187330b15e80
+POST {{url}}/target/6107b06bf067830f058ae427
 Content-Type: application/json
 
 {
-   \
-    "targetName":"nizam",
-    "targetCrush":"rizly"
+   
+    "targetName":"raju",
+    "targetCrush":"radha"
 }
 
 ###
 
 GET {{url}}/user
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiI2MTA2NWRjOWI4YmMxODczMzBiMTVlODAiLCJpYXQiOjE2Mjc4MTI3MDUsImlzcyI6IkxvdmVCeXRlcyJ9.dgUQXM_U_T35mFdVh2baID9qAMeFe4ra94WK1jx1wHY
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiI2MTA3YjA2YmYwNjc4MzBmMDU4YWU0MjciLCJpYXQiOjE2Mjc4OTgyNzEsImlzcyI6IkxvdmVCeXRlcyJ9.SNrgA0qlHhuvIpGUaA75nlJj3LX6eKt10fut3YoZ-HE
+
+###
+POST {{url}}/auth/forgot-password
+Content-Type: application/json
+
+{
+    "email":"nizamniz100@gmail.com"
+}
+
+###
+POST {{url}}/auth/change-password/6107b06bf067830f058ae427/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiI2MTA3YjA2YmYwNjc4MzBmMDU4YWU0MjciLCJpYXQiOjE2MjgwNTk4NDUsImlzcyI6IkxvdmVCeXRlcyJ9.o6Ryi6Bo7Lm7FBnmIslS0upLW98fG-GfbX9rQ679KHA
+Content-Type: application/json
+
+{
+   "password":"234",
+   "password1":"234"
+}

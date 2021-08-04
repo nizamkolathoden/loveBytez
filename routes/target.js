@@ -28,11 +28,10 @@ router.post("/:userId",async(req,res)=>{
 
     const subject = 'Target found Email';
 
-                const text = `Hola ${admin.name} Your friend ${targetName} Sucessfuly fooled His/Her Crush Name ${targetCrush}  🤗`
+                const text = `Hola ${admin.name} Good News! Your friend ${targetName} Sucessfuly fooled His/Her Crush Name as ${targetCrush}  🤗`
 
-                const html = `<h3> Hola ${admin.name} Your friend ${targetName} Sucessfuly fooled His/Her Crush Name ${targetCrush}  🤗</h3>
-                <h3>🤗 voila</h3>
-                   
+                const html = `<h3> Hola ${admin.name} Good News! Your friend ${targetName} Sucessfuly fooled His/Her Crush Name as ${targetCrush}  🤗</h3>
+                <h3>🤗 voila</h3>  
                 `
 
                 const Useremail = admin.email;

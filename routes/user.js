@@ -2,6 +2,9 @@ const router = require("express").Router();
 
 const Target = require("../model/target.Model")
 
+const User = require("../model/user.Model")
+
+
 const { verifyAcessToken } = require("../config/jwt.config")
 
 router.get("/", verifyAcessToken, async (req, res) => {
@@ -11,10 +14,12 @@ router.get("/", verifyAcessToken, async (req, res) => {
 
         if (!userId)
             return res.json({ error: "Plz logged in" })
+        
+        const userData = await User.findById(userId,{name:1,_id:1}) 
+        
+        const fools = await Target.find({ refral: userId }).populate('refral',{name:1})
 
-        const fools = await Target.find({ refral: userId })
-
-        res.json({ target: fools })
+        res.json({ target: fools,user:userData })
     
     } catch (err) {
 
